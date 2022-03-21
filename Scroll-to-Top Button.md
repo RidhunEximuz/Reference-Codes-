@@ -1,8 +1,9 @@
 # Scroll To Top Button 
 
-```html
+CSS
 
-<style>
+```css
+
 html {
   scroll-behavior: smooth;
 }
@@ -28,22 +29,30 @@ html {
 #GotoTop:hover {
   background-color: #555;
 }
-</style>
-</head>
-<body>
 
+```
+
+HTML
+
+```html
 <button onclick="topFun()" id="GotoTop" title="Go to top">Top</button>
 
 <div style="background-color:lightgrey;padding:30px 30px 2500px">
-	<p>This example demonstrates how to create a "scroll to top" button that becomes visible </p>
+    <p>This example demonstrates how to create a "scroll to top" button that becomes visible </p>
 </div>
+```
 
-<script>
-//Get the button
+
+JS
+
+```javascript
+
 var varTop = document.getElementById("GotoTop");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+// Scroll
+window.onscroll = function() {
+  scrollFunction()
+  };
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -53,11 +62,10 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// Click
 function topFun() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-</script>
   
  ```
